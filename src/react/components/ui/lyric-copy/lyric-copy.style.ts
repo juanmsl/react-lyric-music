@@ -20,6 +20,10 @@ export const LyricCopyStyle = styled.section`
     justify-content: space-between;
     align-items: baseline;
     gap: 20px;
+
+    &--close {
+      cursor: pointer;
+    }
   }
 
   .copy-content {

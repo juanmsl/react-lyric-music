@@ -15,7 +15,7 @@ export const LyricCopy = () => {
           Welcome to Lyric Music
         </Typography>
 
-        <Icon name='cross' className='right-container--close' onClick={() => setIsOpen(false)} />
+        <Icon name='cross' className='copy-header--close' onClick={() => setIsOpen(false)} />
       </section>
 
       <section className='copy-content'>
