@@ -18,7 +18,7 @@ export const BandCard = ({ band }: BandCardProps) => {
     <BandCardStyle>
       <Image
         className='band-image'
-        src={`/assets/images/${imageName}`}
+        src={`/images/${imageName}`}
         alt={band.band_name}
         onError={() => setImageName('default.png')}
       />

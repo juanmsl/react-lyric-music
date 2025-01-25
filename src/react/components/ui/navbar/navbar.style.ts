@@ -12,29 +12,6 @@ export const NavbarStyle = styled.nav`
   grid-auto-flow: column;
   justify-content: space-between;
 
-  .navbar-logo {
-    position: relative;
-    font-size: 163px;
-
-    &--image {
-      width: 1em;
-      aspect-ratio: 10/5;
-      object-fit: contain;
-      display: block;
-    }
-
-    &--title {
-      display: block;
-      color: ${props => props.theme.colors.primary.light};
-      position: absolute;
-      top: 8.2375em;
-      left: 14.155em;
-      font-size: 0.04em;
-      text-transform: uppercase;
-      letter-spacing: 0.5em;
-    }
-  }
-
   .navbar-filters {
     display: none;
     gap: 40px;

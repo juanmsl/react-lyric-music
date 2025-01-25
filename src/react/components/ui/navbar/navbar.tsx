@@ -1,8 +1,9 @@
-import { Icon, Image, IconNameT, Tooltip, Input, Typography } from 'juanmsl/ui';
+import { Icon, IconNameT, Tooltip, Input } from 'juanmsl/ui';
 import { Link, NavLink, Route, Routes } from 'react-router-dom';
 
 import { FilterButton, NavbarStyle } from './navbar.style';
 
+import { LyricLogo } from '@components/ui';
 import { BandFilter, useBandFilters } from '@contexts';
 import { PATHS } from '@core/constants';
 
@@ -48,11 +49,8 @@ export const Navbar = () => {
 
   return (
     <NavbarStyle>
-      <Link to={PATHS.HOME_URL} className='navbar-logo'>
-        <Image className='navbar-logo--image' src='/assets/images/lyric_lg_rgb_mnt_wht.png' alt='Lyric Logo' />
-        <Typography weight='bold' noPadding className='navbar-logo--title'>
-          Music
-        </Typography>
+      <Link to={PATHS.HOME_URL}>
+        <LyricLogo />
       </Link>
 
       <Routes>

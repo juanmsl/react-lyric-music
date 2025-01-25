@@ -10,8 +10,4 @@ export const PageTransitionStyle = styled(motion.section)`
   background: ${props => props.theme.colors.background.paper};
   display: grid;
   place-content: center;
-
-  .logo {
-    width: 200px;
-  }
 `;

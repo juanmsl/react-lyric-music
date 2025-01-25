@@ -3,6 +3,8 @@ import React from 'react';
 
 import { PageTransitionStyle } from './page-transition.style';
 
+import { LyricLogo } from '@components/ui';
+
 type PageTransitionProps = {
   children: React.ReactNode;
 };
@@ -21,11 +23,7 @@ export const PageTransition = ({ children }: PageTransitionProps) => {
           left: 0,
         }}
       >
-        <motion.img
-          loading='lazy'
-          className='logo'
-          src='/assets/images/lyric_lg_rgb_mnt_wht.png'
-          alt='logo'
+        <motion.section
           initial={{
             x: -300,
             opacity: 0,
@@ -42,7 +40,9 @@ export const PageTransition = ({ children }: PageTransitionProps) => {
             scale: 1,
           }}
           transition={{ duration: 0.5, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-        />
+        >
+          <LyricLogo size={300} />
+        </motion.section>
       </PageTransitionStyle>
       <PageTransitionStyle
         initial={{ width: '100%' }}
@@ -54,11 +54,7 @@ export const PageTransition = ({ children }: PageTransitionProps) => {
           right: 0,
         }}
       >
-        <motion.img
-          loading='lazy'
-          src='/assets/images/lyric_lg_rgb_mnt_wht.png'
-          alt='logo'
-          className='logo'
+        <motion.section
           initial={{
             x: 0,
             opacity: 1,
@@ -72,7 +68,9 @@ export const PageTransition = ({ children }: PageTransitionProps) => {
             opacity: 0,
           }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-        />
+        >
+          <LyricLogo size={300} />
+        </motion.section>
       </PageTransitionStyle>
     </>
   );
