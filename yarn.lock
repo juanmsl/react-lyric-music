@@ -2735,10 +2735,10 @@ json5@^2.2.3:
     object.assign "^4.1.4"
     object.values "^1.1.6"
 
-juanmsl@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/juanmsl/-/juanmsl-0.0.4.tgz#8891688a13251e3d8723beca30bdbdbe2bf81294"
-  integrity sha512-eq7i8rxq3uDKeRaGwtdewC0UcocPoJ/MPSZ4FzJP+zuyI3qFO0d0+O1jGl0qb6Vxn8SQysKMydiwca7hKhzI6A==
+juanmsl@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/juanmsl/-/juanmsl-0.0.5.tgz#43f371354dec58928e72d6ded7a3853693e4b5e2"
+  integrity sha512-b2oCTNWXiHJCEsvp7WBk/D9Kv5WN3+yBEtDDITrhr6NSaG7n+KR4Tym2X5sBnk4aiL5SL8MGl1rWkH+PtTvXHw==
   dependencies:
     "@hookform/resolvers" "^3.1.0"
     axios "^1.4.0"

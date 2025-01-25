@@ -1,4 +1,6 @@
+import { useDimensions } from 'juanmsl/hooks';
 import { Icon, IconNameT, Tooltip, Input } from 'juanmsl/ui';
+import { useRef } from 'react';
 import { Link, NavLink, Route, Routes } from 'react-router-dom';
 
 import { FilterButton, NavbarContainerStyle, NavbarStyle } from './navbar.style';
@@ -46,9 +48,11 @@ const actions = [
 
 export const Navbar = () => {
   const { category, setCategory, searchValue, setSearchValue } = useBandFilters();
+  const navbarRef = useRef(null);
+  const { width } = useDimensions(navbarRef);
 
   return (
-    <NavbarContainerStyle>
+    <NavbarContainerStyle ref={navbarRef}>
       <NavbarStyle>
         <Link to={PATHS.HOME_URL}>
           <LyricLogo />
@@ -58,7 +62,7 @@ export const Navbar = () => {
           <Route
             path={PATHS.HOME_URL}
             element={
-              <section className='navbar-filters'>
+              <section className={`navbar-filters ${width < 1000 ? 'navbar-hidden' : ''}`}>
                 <section className='navbar-filters--categories'>
                   {filters.map(({ label, value }) => (
                     <FilterButton

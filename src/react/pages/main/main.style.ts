@@ -4,10 +4,7 @@ export const MainPageStyle = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
-  height: 100%;
-  overflow: auto;
   align-content: start;
-  padding: 30px;
 `;
 
 export const MainPageMessageStyle = styled.section`

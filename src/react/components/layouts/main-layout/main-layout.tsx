@@ -11,7 +11,9 @@ export const MainLayout = () => {
       <MainLayoutStyle>
         <section>
           <Navbar />
-          <Outlet />
+          <section className='layout-container'>
+            <Outlet />
+          </section>
         </section>
         <LyricCopy />
       </MainLayoutStyle>

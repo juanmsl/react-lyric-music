@@ -10,5 +10,6 @@ export const MainLayoutStyle = styled.main`
 
   .layout-container {
     padding: 30px;
+    overflow: auto;
   }
 `;

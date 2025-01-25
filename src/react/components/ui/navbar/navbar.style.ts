@@ -24,15 +24,15 @@ export const NavbarStyle = styled.nav`
   z-index: 100;
 
   .navbar-filters {
-    display: none;
+    display: grid;
     gap: 40px;
     align-items: center;
     justify-content: start;
     grid-template-columns: auto 1fr;
     width: 100%;
 
-    @media all and (min-width: ${props => props.theme.constants.breakpoints.laptopM}) {
-      display: grid;
+    &.navbar-hidden {
+      display: none;
     }
 
     &--categories {
