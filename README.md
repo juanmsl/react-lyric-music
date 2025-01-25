@@ -4,10 +4,19 @@ This is a challenge preparation for Lyric.ai company, the purpose of this projec
 
 ## Setup and run
 
-Just clone or download the repository
-Install dependencies with `yarn install`
+> Important: You must run this project on Node.js version 20.x.x
 
-And then run the project with `yarn dev`
+Just clone or download the repository, install dependencies, and then run the project
+
+
+```shell
+git clone https://github.com/juanmsl/react-lyric-music.git
+cd react-lyric-music
+yarn install
+yarn dev
+```
+
+> Also you could use `npm` instead of `yarn` if you prefer
 
 ## Mock data and images
 
