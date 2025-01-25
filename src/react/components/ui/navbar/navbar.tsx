@@ -82,8 +82,6 @@ export const Navbar = () => {
                     value={searchValue}
                     setValue={setSearchValue}
                     leftIcon='magnifying-glass'
-                    rightIcon={searchValue !== '' ? 'cross' : undefined}
-                    onClickRightIcon={searchValue !== '' ? () => setSearchValue('') : undefined}
                     className='navbar-input'
                   />
                 </section>
