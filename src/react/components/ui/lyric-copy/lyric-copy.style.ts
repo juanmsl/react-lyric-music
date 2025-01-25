@@ -6,7 +6,7 @@ export const LyricCopyStyle = styled.section`
   padding: 30px;
   margin: 30px 30px 30px 0;
   border-radius: 10px;
-  display: grid;
+  display: none;
   gap: 20px;
   grid-template-rows: auto 1fr auto;
   height: calc(100dvh - 60px);
@@ -14,6 +14,10 @@ export const LyricCopyStyle = styled.section`
   position: sticky;
   top: 30px;
   width: 350px;
+
+  @media all and (min-width: ${props => props.theme.constants.breakpoints.tablet}) {
+    display: grid;
+  }
 
   .copy-header {
     display: flex;
