@@ -25,7 +25,7 @@ export const CustomCursorStyle = styled.span`
     height: 30px;
     border: 2px solid ${props => props.theme.colors.primary.main};
     box-sizing: border-box;
-    z-index: 100;
+    z-index: 1000;
     opacity: 0.5;
     transition:
       all 0.08s ease-out,
@@ -49,7 +49,7 @@ export const CustomCursorStyle = styled.span`
     margin-top: -3px;
     width: 6px;
     height: 6px;
-    z-index: 100;
+    z-index: 1000;
     background-color: ${props => props.theme.colors.primary.main};
     transition: opacity 0.3s ease-in-out;
     opacity: 1;

@@ -9,15 +9,11 @@ export const MainLayout = () => {
   return (
     <PageTransition>
       <MainLayoutStyle>
-        <section className='navbar-container'>
+        <section>
           <Navbar />
-        </section>
-        <section className='content-container'>
           <Outlet />
         </section>
-        <section className='copy-container'>
-          <LyricCopy />
-        </section>
+        <LyricCopy />
       </MainLayoutStyle>
     </PageTransition>
   );

@@ -1,13 +1,22 @@
 import { Icon, Typography } from 'juanmsl/ui';
+import { useState } from 'react';
 
 import { LyricCopyStyle } from './lyric-copy.style';
 
 export const LyricCopy = () => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  if (!isOpen) return null;
+
   return (
     <LyricCopyStyle>
-      <Typography variant='header4' weight='bold' className='copy-title'>
-        Welcome to Lyric Music
-      </Typography>
+      <section className='copy-header'>
+        <Typography variant='header4' weight='bold' className='copy-title'>
+          Welcome to Lyric Music
+        </Typography>
+
+        <Icon name='cross' className='right-container--close' onClick={() => setIsOpen(false)} />
+      </section>
 
       <section className='copy-content'>
         <Typography>

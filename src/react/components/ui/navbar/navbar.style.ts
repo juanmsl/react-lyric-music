@@ -1,6 +1,14 @@
 import { Typography } from 'juanmsl/ui';
 import styled from 'styled-components';
 
+export const NavbarContainerStyle = styled.section`
+  background: ${props => props.theme.colors.background.main};
+  padding: 30px 30px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+`;
+
 export const NavbarStyle = styled.nav`
   background: ${props => props.theme.colors.background.paper};
   color: ${props => props.theme.colors.text.main};
@@ -11,6 +19,9 @@ export const NavbarStyle = styled.nav`
   align-items: center;
   grid-auto-flow: column;
   justify-content: space-between;
+  position: sticky;
+  top: 30px;
+  z-index: 100;
 
   .navbar-filters {
     display: none;
@@ -20,7 +31,7 @@ export const NavbarStyle = styled.nav`
     grid-template-columns: auto 1fr;
     width: 100%;
 
-    @media all and (min-width: ${props => props.theme.constants.breakpoints.laptopL}) {
+    @media all and (min-width: ${props => props.theme.constants.breakpoints.laptopM}) {
       display: grid;
     }
 

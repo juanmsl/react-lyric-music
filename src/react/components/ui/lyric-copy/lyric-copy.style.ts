@@ -4,12 +4,23 @@ export const LyricCopyStyle = styled.section`
   background: ${props => props.theme.colors.background.paper};
   color: ${props => props.theme.colors.text.main};
   padding: 30px;
+  margin: 30px 30px 30px 0;
   border-radius: 10px;
   display: grid;
   gap: 20px;
   grid-template-rows: auto 1fr auto;
-  height: 100%;
+  height: calc(100dvh - 60px);
   overflow: auto;
+  position: sticky;
+  top: 30px;
+  width: 350px;
+
+  .copy-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+  }
 
   .copy-content {
     display: grid;

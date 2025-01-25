@@ -7,6 +7,7 @@ export const MainPageStyle = styled.section`
   height: 100%;
   overflow: auto;
   align-content: start;
+  padding: 30px;
 `;
 
 export const MainPageMessageStyle = styled.section`

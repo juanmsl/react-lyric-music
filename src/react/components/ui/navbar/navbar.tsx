@@ -1,7 +1,7 @@
 import { Icon, IconNameT, Tooltip, Input } from 'juanmsl/ui';
 import { Link, NavLink, Route, Routes } from 'react-router-dom';
 
-import { FilterButton, NavbarStyle } from './navbar.style';
+import { FilterButton, NavbarContainerStyle, NavbarStyle } from './navbar.style';
 
 import { LyricLogo } from '@components/ui';
 import { BandFilter, useBandFilters } from '@contexts';
@@ -48,56 +48,58 @@ export const Navbar = () => {
   const { category, setCategory, searchValue, setSearchValue } = useBandFilters();
 
   return (
-    <NavbarStyle>
-      <Link to={PATHS.HOME_URL}>
-        <LyricLogo />
-      </Link>
+    <NavbarContainerStyle>
+      <NavbarStyle>
+        <Link to={PATHS.HOME_URL}>
+          <LyricLogo />
+        </Link>
 
-      <Routes>
-        <Route
-          path={PATHS.HOME_URL}
-          element={
-            <section className='navbar-filters'>
-              <section className='navbar-filters--categories'>
-                {filters.map(({ label, value }) => (
-                  <FilterButton
-                    key={value}
-                    noPadding
-                    className={value === category ? 'active' : ''}
-                    onClick={() => setCategory(value)}
-                  >
-                    {label}
-                  </FilterButton>
-                ))}
+        <Routes>
+          <Route
+            path={PATHS.HOME_URL}
+            element={
+              <section className='navbar-filters'>
+                <section className='navbar-filters--categories'>
+                  {filters.map(({ label, value }) => (
+                    <FilterButton
+                      key={value}
+                      noPadding
+                      className={value === category ? 'active' : ''}
+                      onClick={() => setCategory(value)}
+                    >
+                      {label}
+                    </FilterButton>
+                  ))}
+                </section>
+
+                <section className='navbar-filters--input'>
+                  <Input
+                    name='search'
+                    value={searchValue}
+                    setValue={setSearchValue}
+                    leftIcon='magnifying-glass'
+                    rightIcon={searchValue !== '' ? 'cross' : undefined}
+                    onClickRightIcon={searchValue !== '' ? () => setSearchValue('') : undefined}
+                    className='navbar-input'
+                  />
+                </section>
               </section>
+            }
+            index
+          />
+          <Route path='*' element={<span />} />
+        </Routes>
 
-              <section className='navbar-filters--input'>
-                <Input
-                  name='search'
-                  value={searchValue}
-                  setValue={setSearchValue}
-                  leftIcon='magnifying-glass'
-                  rightIcon={searchValue !== '' ? 'cross' : undefined}
-                  onClickRightIcon={searchValue !== '' ? () => setSearchValue('') : undefined}
-                  className='navbar-input'
-                />
-              </section>
-            </section>
-          }
-          index
-        />
-        <Route path='*' element={<span />} />
-      </Routes>
-
-      <section className='navbar-actions'>
-        {actions.map(({ icon, path, label }) => (
-          <Tooltip content={label} position='bottom' offset={10} key={label}>
-            <NavLink to={path} className='navbar-actions--link'>
-              <Icon name={icon} />
-            </NavLink>
-          </Tooltip>
-        ))}
-      </section>
-    </NavbarStyle>
+        <section className='navbar-actions'>
+          {actions.map(({ icon, path, label }) => (
+            <Tooltip content={label} position='bottom' offset={10} key={label}>
+              <NavLink to={path} className='navbar-actions--link'>
+                <Icon name={icon} />
+              </NavLink>
+            </Tooltip>
+          ))}
+        </section>
+      </NavbarStyle>
+    </NavbarContainerStyle>
   );
 };
