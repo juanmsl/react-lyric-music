@@ -4,11 +4,9 @@ import { useTheme } from 'styled-components';
 
 import { BandCardStyle } from './band-card.style';
 
+import { DEFAULT_BAND_DESCRIPTION, DEFAULT_BAND_IMAGE } from '@core/constants';
 import { Band } from '@domain';
 import { useGetBandDetails } from '@hooks';
-
-const defaultDescription =
-  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci delectus et fugit id ipsa iusto libero modi, nobis nostrum nulla odit possimus quod ratione, reprehenderit, totam. Assumenda atque eaque earum ex exercitationem illum iste laudantium maxime nulla officiis, repellendus sunt? A alias assumenda deleniti ipsum omnis recusandae, repellat saepe vero?';
 
 type BandCardProps = {
   band: Band;
@@ -28,7 +26,7 @@ export const BandCard = ({ band }: BandCardProps) => {
           className='band-image'
           src={`/images/${imageName}`}
           alt={band.band_name}
-          onError={() => setImageName('default.png')}
+          onError={() => setImageName(DEFAULT_BAND_IMAGE)}
         />
         <section className='band-data-content'>
           <Typography variant='header4' className='band-name' noPadding>
@@ -38,7 +36,7 @@ export const BandCard = ({ band }: BandCardProps) => {
             {band.album} - {band.genre}
           </Typography>
           <Typography className='band-description' variant='label' noPadding>
-            {description || defaultDescription}
+            {description || DEFAULT_BAND_DESCRIPTION}
           </Typography>
         </section>
         <Ripple color={theme.colors.text.main} />
