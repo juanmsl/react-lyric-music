@@ -1,4 +1,4 @@
-import { Band } from '@domain';
+import { Band, BandDetails } from '@domain';
 
 export const BandInstance: Array<Band> = [
   { id: '001', band_name: 'The Velvet Echo', album: 'Whispers in the Wind', genre: 'rock' },
@@ -7,3 +7,9 @@ export const BandInstance: Array<Band> = [
   { id: '004', band_name: 'Crimson Groove', album: 'Scarlet Rhythms', genre: 'pop' },
   { id: '005', band_name: 'Neon Reverie', album: 'Echoes of Tomorrow', genre: 'pop' },
 ];
+
+export const BandDetailsInstance: BandDetails = {
+  id: '005',
+  description: 'Neon Reverie blends futuristic synth with retro vibes to create unforgettable anthems.',
+  album: 'Echoes of Tomorrow',
+};

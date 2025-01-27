@@ -4,3 +4,9 @@ export type Band = {
   album: string;
   genre: string;
 };
+
+export type BandDetails = {
+  id: string;
+  description: string;
+  album: string;
+};

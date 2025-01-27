@@ -10,4 +10,8 @@ export class BandsController implements BandsPort {
   getBands() {
     return this.adapter.getBands();
   }
+
+  getBandDetails(bandId: string) {
+    return this.adapter.getBandDetails(bandId);
+  }
 }

@@ -5,6 +5,10 @@ import { useTheme } from 'styled-components';
 import { BandCardStyle } from './band-card.style';
 
 import { Band } from '@domain';
+import { useGetBandDetails } from '@hooks';
+
+const defaultDescription =
+  'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci delectus et fugit id ipsa iusto libero modi, nobis nostrum nulla odit possimus quod ratione, reprehenderit, totam. Assumenda atque eaque earum ex exercitationem illum iste laudantium maxime nulla officiis, repellendus sunt? A alias assumenda deleniti ipsum omnis recusandae, repellat saepe vero?';
 
 type BandCardProps = {
   band: Band;
@@ -13,6 +17,9 @@ type BandCardProps = {
 export const BandCard = ({ band }: BandCardProps) => {
   const [imageName, setImageName] = useState(`im${band.id}.png`);
   const theme = useTheme();
+  const {
+    band: { description },
+  } = useGetBandDetails(band.id);
 
   return (
     <HoverCard>
@@ -31,10 +38,7 @@ export const BandCard = ({ band }: BandCardProps) => {
             {band.album} - {band.genre}
           </Typography>
           <Typography className='band-description' variant='label' noPadding>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci delectus et fugit id ipsa iusto libero
-            modi, nobis nostrum nulla odit possimus quod ratione, reprehenderit, totam. Assumenda atque eaque earum ex
-            exercitationem illum iste laudantium maxime nulla officiis, repellendus sunt? A alias assumenda deleniti
-            ipsum omnis recusandae, repellat saepe vero?
+            {description || defaultDescription}
           </Typography>
         </section>
         <Ripple color={theme.colors.text.main} />
