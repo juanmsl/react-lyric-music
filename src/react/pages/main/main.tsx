@@ -1,4 +1,4 @@
-import { Icon, Typography } from 'juanmsl/ui';
+import { Icon, Typography } from 'polpo/ui';
 import { useMemo } from 'react';
 
 import { MainPageMessageStyle, MainPageStyle } from './main.style';

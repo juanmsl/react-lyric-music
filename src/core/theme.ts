@@ -1,4 +1,4 @@
-import { CommonThemeEntity, PaletteThemeEntity, ThemeConstantsEntity } from 'juanmsl/ui';
+import { CommonThemeEntity, PaletteThemeEntity, ThemeConstantsEntity } from 'polpo/ui';
 
 export const ThemeConstants: ThemeConstantsEntity = {
   fontFamily: 'Inter, sans-serif',

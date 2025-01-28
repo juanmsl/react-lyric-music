@@ -1,4 +1,4 @@
-import { Icon, Typography } from 'juanmsl/ui';
+import { Icon, Typography } from 'polpo/ui';
 import { useState } from 'react';
 
 import { LyricCopyStyle } from './lyric-copy.style';

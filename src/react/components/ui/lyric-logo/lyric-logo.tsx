@@ -1,4 +1,4 @@
-import { Image, Typography } from 'juanmsl/ui';
+import { Image, Typography } from 'polpo/ui';
 
 import { LyricLogoStyles } from './lyric-logo.style';
 

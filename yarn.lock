@@ -2735,19 +2735,6 @@ json5@^2.2.3:
     object.assign "^4.1.4"
     object.values "^1.1.6"
 
-juanmsl@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/juanmsl/-/juanmsl-0.0.5.tgz#43f371354dec58928e72d6ded7a3853693e4b5e2"
-  integrity sha512-b2oCTNWXiHJCEsvp7WBk/D9Kv5WN3+yBEtDDITrhr6NSaG7n+KR4Tym2X5sBnk4aiL5SL8MGl1rWkH+PtTvXHw==
-  dependencies:
-    "@hookform/resolvers" "^3.1.0"
-    axios "^1.4.0"
-    color "^4.2.3"
-    moment "^2.30.1"
-    react-colorful "^5.6.1"
-    use-eye-dropper "^1.6.1"
-    yup "^1.2.0"
-
 keyv@^4.5.3:
   version "4.5.4"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-4.5.4.tgz#a879a99e29452f942439f2a405e3af8b31d4de93"
@@ -3118,6 +3105,19 @@ pluralize@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-8.0.0.tgz#1a6fa16a38d12a1901e0320fa017051c539ce3b1"
   integrity sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==
+
+polpo@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/polpo/-/polpo-0.1.1.tgz#8eeb4c7150b95343d79b97ef22256abf67f5b1c6"
+  integrity sha512-uZvVXa6T4paf1ePnzJS7mH1vsqbuqjs2MzOkc9TjMJbZ+BaVLJkC0B6xON2hRmr78OPmOGbJYGBl/22eCDjPfg==
+  dependencies:
+    "@hookform/resolvers" "^3.1.0"
+    axios "^1.4.0"
+    color "^4.2.3"
+    moment "^2.30.1"
+    react-colorful "^5.6.1"
+    use-eye-dropper "^1.6.1"
+    yup "^1.2.0"
 
 possible-typed-array-names@^1.0.0:
   version "1.0.0"

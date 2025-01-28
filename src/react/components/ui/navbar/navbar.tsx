@@ -1,5 +1,5 @@
-import { useDimensions } from 'juanmsl/hooks';
-import { Icon, IconNameT, Tooltip, Input } from 'juanmsl/ui';
+import { useDimensions } from 'polpo/hooks';
+import { Icon, IconNameT, Tooltip, Input } from 'polpo/ui';
 import { useRef } from 'react';
 import { Link, NavLink, Route, Routes } from 'react-router-dom';
 

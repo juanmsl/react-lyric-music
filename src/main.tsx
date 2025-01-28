@@ -1,4 +1,4 @@
-import { ThemeProvider } from 'juanmsl/ui';
+import { ThemeProvider } from 'polpo/ui';
 import { StrictMode, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { ErrorBoundary } from 'react-error-boundary';

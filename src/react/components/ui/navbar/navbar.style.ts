@@ -1,4 +1,4 @@
-import { Typography } from 'juanmsl/ui';
+import { Typography } from 'polpo/ui';
 import styled from 'styled-components';
 
 export const NavbarContainerStyle = styled.section`

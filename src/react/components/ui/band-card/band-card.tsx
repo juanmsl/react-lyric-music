@@ -1,4 +1,4 @@
-import { HoverCard, Image, Ripple, Typography } from 'juanmsl/ui';
+import { HoverCard, Image, Ripple, Typography } from 'polpo/ui';
 import { useState } from 'react';
 import { useTheme } from 'styled-components';
 

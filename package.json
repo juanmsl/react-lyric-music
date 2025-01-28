@@ -16,7 +16,7 @@
   "dependencies": {
     "axios": "^1.7.9",
     "framer-motion": "^11.0.3",
-    "juanmsl": "^0.0.5",
+    "polpo": "^0.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-error-boundary": "^4.0.13",
