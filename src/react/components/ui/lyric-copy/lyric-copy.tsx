@@ -41,7 +41,7 @@ export const LyricCopy = () => {
       </section>
 
       <section className='copy-footer'>
-        <Icon name='crossed-flag' className='copy-footer--icon' />
+        <Icon name='crossed-flags' className='copy-footer--icon' />
         <section className='copy-footer--content'>
           <Typography variant='header4' weight='bold' noPadding className='copy-title'>
             Comming soon
